@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mp3player.controller.ControlPaneController">
+    <Button fx:id="previousButton" mnemonicParsing="false" text="Button"/>
+    <ToggleButton fx:id="playButton" mnemonicParsing="false" text="ToggleButton"/>
+    <Button fx:id="nextButton" mnemonicParsing="false" text="Button"/>
+    <Slider fx:id="volumeSlider"/>
+    <Slider fx:id="progressSlider"/>
+</HBox>
