@@ -10,7 +10,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <javafx.version>11.0.2</javafx.version>
+        <javafx.version>11.0.1</javafx.version>
         <jid3lib.version>0.5.4</jid3lib.version>
     </properties>
 
@@ -22,12 +22,17 @@
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
+            <artifactId>javafx-media</artifactId>
             <version>${javafx.version}</version>
         </dependency>
         <dependency>

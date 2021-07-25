@@ -3,6 +3,7 @@ package com.mp3player.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 
 public class ControlPaneController {
@@ -21,29 +22,30 @@ public class ControlPaneController {
     @FXML
     private Slider progressSlider;
 
-    public void initialize() {
-        System.out.println("Control controller created");
-        configureButtons();
-        configureSliders();
+    @FXML
+    private TextField messageTextField;
+
+    public Button getPreviousButton() {
+        return previousButton;
     }
 
-    private void configureSliders() {
-        volumeSlider.valueProperty().addListener((observable, oldValue, newValue) ->
-                System.out.println("Volume was changed" + newValue.doubleValue())
-        );
-
-        progressSlider.valueProperty().addListener( x-> System.out.println("Song progress"));
+    public ToggleButton getPlayButton() {
+        return playButton;
     }
 
-    private void configureButtons() {
-        previousButton.setOnAction(event -> System.out.println("Previous song "));
-        nextButton.setOnAction(x -> System.out.println("Next song "));
-        playButton.setOnAction(event -> {
-            if(playButton.isSelected()) {
-                System.out.println("Play");
-            } else {
-                System.out.println("Stop");
-            }
-        });
+    public Button getNextButton() {
+        return nextButton;
+    }
+
+    public Slider getVolumeSlider() {
+        return volumeSlider;
+    }
+
+    public Slider getProgressSlider() {
+        return progressSlider;
+    }
+
+    public TextField getMessageTextField() {
+        return messageTextField;
     }
 }
